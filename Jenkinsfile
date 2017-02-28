@@ -11,6 +11,6 @@ node('maven') {
   // Maven build will compile and execute any defined tests that produces
   // a deployable jar file as the output.
   stage('Maven Build and Test') {
-    sh "cicd/scripts/build.sh"
+    sh "/usr/bin/mvn clean package"
   }
 }
